@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A2B Reparações - Lisboa | Serviços 24h</title>
+  <meta name="description" content="Serviços de eletricidade, canalização, desentupimentos, estores, fechaduras, emergência 24h, energia solar, máquinas, e mais em Lisboa. Atendimento imediato no WhatsApp.">
+  <meta name="keywords" content="eletricista Lisboa, canalizador, desentupimentos, estores, fechaduras, eletricidade 24h, energia solar, máquina de lavar, máquina de loiça, emergência Lisboa, carregador carro elétrico, esquentador, caldeira, termoacumulador">
+  <meta name="author" content="A2B Reparações">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #23292e;
+      --secondary: #c5a363;
+      --green: #25D366;
+      --danger: #dc3545;
+      --dark: #222;
+      --light: #f9f9f9;
+      --gray: #6c757d;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+    header { background-color: var(--primary); color: white; padding: 15px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.08);}
+    .header-content { display: flex; justify-content: space-between; align-items: center; }
+    .logo { 
+      display: flex; 
+      align-items: center; 
+      font-weight: bold; 
+      font-size: 24px; 
+      color: var(--secondary);
+    }
+    .logo span { color: white; }
+    .logo-img {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary) 70%, var(--secondary) 70%, var(--secondary) 100%);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+      color: white;
+      font-weight: bold;
+      position: relative;
+      overflow: hidden;
+    }
+    .logo-img::before {
+      content: "A²B";
+      font-size: 18px;
+      line-height: 1;
+    }
+    .logo-img::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 30%;
+      height: 30%;
+      background-color: var(--secondary);
+      border-top-left-radius: 8px;
+    }
+    nav ul { display: flex; list-style: none; }
+    nav ul li { margin-left: 20px; }
+    nav ul li a { color: white; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+    nav ul li a:hover { color: var(--secondary); }
+    .btn { display: inline-block; background-color: var(--secondary); color: var(--dark); padding: 10px 22px; border-radius: 5px; text-decoration: none; font-weight: 600; transition: all 0.3s; }
+    .btn:hover { background-color: #ad8a36; color: #fff; transform: translateY(-2px);}
+    .hero { background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f0f0f0"/><path d="M0 0L100 100" stroke="%23c5a363" stroke-width="1"/><path d="M100 0L0 100" stroke="%23c5a363" stroke-width="1"/></svg>'); color: var(--dark); padding: 80px 0 60px 0; text-align: center;}
+    .hero-logo { 
+      width: 180px; 
+      height: 180px; 
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary) 70%, var(--secondary) 70%, var(--secondary) 100%);
+      border-radius: 50%; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      margin: 0 auto 20px; 
+      color: white; 
+      font-size: 42px; 
+      font-weight: bold;
+      border: 5px solid var(--secondary);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-logo::before {
+      content: "A²B";
+      z-index: 2;
+    }
+    .hero-logo::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 40%;
+      height: 40%;
+      background-color: var(--secondary);
+      border-top-left-radius: 50%;
+    }
+    .hero h2 { font-size: 2.3rem; margin-bottom: 18px;}
+    .hero p { font-size: 1.15rem; max-width: 700px; margin: 0 auto 28px;}
+    .services { padding: 70px 0 60px 0; background-color: #fff;}
+    .section-title { text-align: center; margin-bottom: 40px;}
+    .section-title h2 { font-size: 2.1rem; color: var(--primary); margin-bottom: 13px;}
+    .section-title p { color: var(--gray); max-width: 700px; margin: 0 auto;}
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px;}
+    .service-card { background-color: var(--light); border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.07); transition: transform 0.3s;}
+    .service-card:hover { transform: translateY(-8px);}
+    .service-icon { background-color: var(--primary); color: white; font-size: 2.2rem; padding: 24px; text-align: center;}
+    .service-content { padding: 18px;}
+    .service-content h3 { margin-bottom: 10px; color: var(--primary);}
+    .about { padding: 70px 0; background-color: var(--light);}
+    .about-content { display: flex; align-items: center; flex-wrap: wrap; gap: 36px;}
+    .about-text { flex: 1; min-width: 280px;}
+    .about-text h2 { color: var(--primary); margin-bottom: 16px;}
+    .about-image { flex: 1; min-width: 260px;}
+    .about-image img { width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.09);}
+    .emergency { background-color: var(--danger); color: white; padding: 42px 0 40px 0; text-align: center;}
+    .emergency h2 { font-size: 2rem; margin-bottom: 13px;}
+    .emergency .btn { background-color: var(--green); color: white;}
+    .emergency .btn:hover { background-color: #128c4d;}
+    .testimonials { padding: 70px 0 60px 0; background-color: white;}
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px;}
+    .testimonial-card { background-color: var(--light); padding: 24px; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.07);}
+    .testimonial-text { font-style: italic; margin-bottom: 13px;}
+    .testimonial-author { display: flex; align-items: center;}
+    .testimonial-author img { width: 45px; height: 45px; border-radius: 50%; margin-right: 11px; object-fit: cover;}
+    .contact { padding: 70px 0 60px 0; background-color: var(--light);}
+    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 34px;}
+    .contact-info h3 { color: var(--primary); margin-bottom: 15px;}
+    .contact-info ul { list-style: none;}
+    .contact-info ul li { margin-bottom: 13px; display: flex; align-items: center;}
+    .contact-info ul li i { margin-right: 9px; color: var(--primary); font-size: 1.1rem;}
+    .contact-form input, .contact-form textarea, .contact-form select { width: 100%; padding: 11px; margin-bottom: 16px; border: 1px solid #ddd; border-radius: 5px;}
+    .contact-form textarea { min-height: 120px;}
+    .contact-form button { width: 100%; }
+    .whatsapp-contact { text-align:center; margin:30px 0;}
+    .whatsapp-contact img { max-width:170px;width:100%;border:6px solid #25D366;border-radius:12px;}
+    .whatsapp-contact p { font-size:0.99em;margin-top:9px; color:#333; }
+    .whatsapp-contact a { color: #25D366; font-weight: 600; }
+    .whatsapp-float {
+      position: fixed; bottom: 20px; right: 20px; background: #25D366; color: #fff;
+      padding: 14px 16px; border-radius: 50%; font-size: 1.8rem; z-index: 999;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3); transition: transform .2s;
+      display: flex; align-items: center; justify-content: center;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    .whatsapp-float span { display:none; }
+    .whatsapp-float:hover { transform: scale(1.1); background:#128c4d; animation: none; }
+    footer { background-color: var(--primary); color: white; padding: 42px 0 16px;}
+    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 24px; margin-bottom: 20px;}
+    .footer-section h3 { color: var(--secondary); margin-bottom: 13px;}
+    .footer-section ul { list-style: none;}
+    .footer-section ul li { margin-bottom: 9px;}
+    .footer-section ul li a { color: #ddd; text-decoration: none; transition: color 0.3s;}
+    .footer-section ul li a:hover { color: var(--secondary);}
+    .footer-bottom { text-align: center; padding-top: 14px; border-top: 1px solid #333;}
+    
+    /* Mensagem de sucesso */
+    .success-message {
+      display: none;
+      background-color: #d4edda;
+      color: #155724;
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 20px;
+      text-align: center;
+    }
+    
+    /* QR Code do WhatsApp */
+    .whatsapp-qr {
+      width: 150px;
+      height: 150px;
+      background: white;
+      border: 6px solid #25D366;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      padding: 10px;
+      position: relative;
+    }
+    .whatsapp-qr::before {
+      content: "╔══════════╗";
+      font-family: monospace;
+      font-size: 10px;
+      color: #333;
+      line-height: 1;
+      margin-bottom: 5px;
+    }
+    .whatsapp-qr::after {
+      content: "╚══════════╝";
+      font-family: monospace;
+      font-size: 10px;
+      color: #333;
+      line-height: 1;
+      margin-top: 5px;
+    }
+    .qr-code-pattern {
+      width: 100px;
+      height: 100px;
+      background: 
+        linear-gradient(90deg, #000 50%, transparent 50%), 
+        linear-gradient(180deg, #000 50%, transparent 50%);
+      background-size: 10px 10px;
+      background-position: 0 0, 0 0;
+      image-rendering: pixelated;
+    }
+    
+    @media (max-width: 900px) {
+      .about-content { flex-direction: column; gap: 20px;}
+    }
+    @media (max-width: 700px) {
+      .header-content { flex-direction: column; text-align: center;}
+      nav ul { margin-top: 16px; flex-wrap: wrap; justify-content: center;}
+      nav ul li { margin: 0 8px 10px;}
+      .hero h2 { font-size: 1.8rem;}
+      .hero-logo { width: 140px; height: 140px; font-size: 32px;}
+      .whatsapp-float { padding: 11px 12px; font-size: 1.5rem;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <div class="logo-img"></div>
+          <div>A2B <span>REPARAÇÕES</span></div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#testimonials">Avaliações</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-logo"></div>
+      <h2>Soluções Profissionais em Reparações</h2>
+      <p>Assistência técnica 24 horas em Lisboa.<br>
+      <b>Contacte já pelo WhatsApp!</b></p>
+      <a href="#contact" class="btn">Pedir Orçamento</a>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Os nossos serviços</h2>
+        <p>Electricidade, canalizações, desentupimentos, estores, fechaduras, emergência, energia solar, máquinas, carregadores de carros eléctricos, esquentadores, caldeiras, termoacumuladores e muito mais!</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-key"></i></div>
+          <div class="service-content">
+            <h3>Fechaduras e abertura de portas</h3>
+            <p>Substituição, instalação de fechaduras e abertura de portas (inclusive em situações de emergência).</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-tools"></i></div>
+          <div class="service-content">
+            <h3>Canalizações</h3>
+            <p>Reparações, trocas e instalações de canalizações em casas, apartamentos e empresas.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-toilet"></i></div>
+          <div class="service-content">
+            <h3>Desentupimentos</h3>
+            <p>Desentupimentos rápidos e eficazes em lavatórios, canos, esgotos e ralos.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-window-maximize"></i></div>
+          <div class="service-content">
+            <h3>Estores</h3>
+            <p>Reparação, manutenção e instalação de estores manuais ou eléctricos.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-shower"></i></div>
+          <div class="service-content">
+            <h3>Máquinas de lavar roupa e loiça</h3>
+            <p>Instalação e manutenção de máquinas de lavar roupa e loiça, com total segurança e garantia.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-charging-station"></i></div>
+          <div class="service-content">
+            <h3>Carregador carro eléctrico</h3>
+            <p>Instalação certificada de carregadores para veículos eléctricos em habitações, condomínios e empresas.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-fire"></i></div>
+          <div class="service-content">
+            <h3>Esquentadores e caldeiras</h3>
+            <p>Instalação e manutenção de esquentadores e caldeiras com técnicos credenciados.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-tint"></i></div>
+          <div class="service-content">
+            <h3>Termoacumuladores</h3>
+            <p>Montagem, assistência e substituição de termoacumuladores eléctricos com garantia de funcionamento.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-home"></i></div>
+          <div class="service-content">
+            <h3>Instalações eléctricas residenciais</h3>
+            <p>Instalação e manutenção eléctrica em moradias e apartamentos, cumprindo todas as normas.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-building"></i></div>
+          <div class="service-content">
+            <h3>Instalações eléctricas comerciais</h3>
+            <p>Soluções eléctricas completas para lojas, escritórios e empresas.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-tools"></i></div>
+          <div class="service-content">
+            <h3>Manutenção preventiva</h3>
+            <p>Planos para garantir segurança, funcionamento contínuo e prevenir avarias.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-exclamation-triangle"></i></div>
+          <div class="service-content">
+            <h3>Reparações de emergência</h3>
+            <p>Atendimento 24 horas em Lisboa para emergências eléctricas, canalização, desentupimentos e mais.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-solar-panel"></i></div>
+          <div class="service-content">
+            <h3>Energia solar</h3>
+            <p>Projectos e instalação de sistemas fotovoltaicos para habitações e empresas.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-plug"></i></div>
+          <div class="service-content">
+            <h3>Actualização de instalações</h3>
+            <p>Modernização de instalações antigas segundo as normas actuais.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>Porquê escolher a A2B Reparações?</h2>
+          <p><strong>Técnicos credenciados</strong> e experientes, referência em eficiência, atendimento rápido e qualidade em Lisboa. Só usamos materiais de primeira qualidade e damos garantia em todos os serviços.</p>
+          <p>Trabalhamos 24 horas, incluindo fins-de-semana e feriados. Segurança, confiança e tranquilidade para a sua casa ou empresa.</p>
+          <a href="#contact" class="btn">Contactar agora</a>
+        </div>
+        <div class="about-image">
+          <div style="background-color: #23292e; color: #c5a363; height: 300px; display: flex; align-items: center; justify-content: center; border-radius: 8px; font-size: 24px; font-weight: bold;">
+            IMAGEM DA EMPRESA
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="emergency">
+    <div class="container">
+      <h2>Precisa de ajuda urgente? Atendimento 24 horas!</h2>
+      <p>Lisboa e arredores. Ligue ou envie mensagem por WhatsApp a qualquer hora.</p>
+      <a href="https://wa.me/351964562617" target="_blank" class="btn">
+        <i class="fab fa-whatsapp"></i> WhatsApp: +351 964 562 617 (24h)
+      </a>
+    </div>
+  </section>
+
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-title">
+        <h2>O que dizem os nossos clientes</h2>
+        <p>Testemunhos de quem já confia na A2B Reparações em Lisboa.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <p>"Precisei de um reparo de emergência e foram rápidos e profissionais. Recomendo!"</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente">
+            <div>
+              <h4>Carlos Simões</h4>
+              <p>Cliente residencial</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <p>"Serviço rápido e simpático. Resolveram o problema do esquentador no próprio dia."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente">
+            <div>
+              <h4>Marina Oliveira</h4>
+              <p>Cliente comercial</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <p>"Instalei energia solar com a A2B e fiquei muito satisfeito. Serviço 5 estrelas."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Cliente">
+            <div>
+              <h4>Ana Santos</h4>
+              <p>Cliente energia solar</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contacte-nos</h2>
+        <p>Peça orçamento rápido, tire dúvidas ou fale connosco 24h via WhatsApp.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Dados de contacto</h3>
+          <ul>
+            <li>
+              <a href="https://wa.me/351964562617" target="_blank" style="color:#25D366; font-weight:600;">
+                <i class="fab fa-whatsapp"></i> +351 964 562 617 <span style="color:#dc3545; font-weight:600;">(24h)</span>
+              </a>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i> a2b-reparacoes@hotmail.com
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i> Lisboa, Portugal
+            </li>
+            <li>
+              <i class="fas fa-clock"></i> Atendimento: 24h por dia, 7 dias por semana
+            </li>
+          </ul>
+          <div class="whatsapp-contact">
+            <h4>WhatsApp rápido</h4>
+            <p>Digitalize o QR code ou clique abaixo para falar connosco:</p>
+            <div class="whatsapp-qr">
+              <div class="qr-code-pattern"></div>
+            </div>
+            <p style="margin-top:14px;">
+              <a href="https://wa.me/351964562617" target="_blank">
+                <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form id="contactForm">
+            <input type="text" name="nome" placeholder="O seu nome" required>
+            <input type="email" name="email" placeholder="O seu e-mail" required>
+            <input type="tel" name="telefone" placeholder="O seu telefone">
+            <select name="servico" required>
+              <option value="" disabled selected>Selecione o serviço</option>
+              <option value="fechaduras">Fechaduras e abertura de portas</option>
+              <option value="canalizacao">Canalizações</option>
+              <option value="desentupimentos">Desentupimentos</option>
+              <option value="estores">Estores</option>
+              <option value="maquinas">Máquinas de lavar roupa/loiça</option>
+              <option value="carregador">Carregador carro eléctrico</option>
+              <option value="esquentador">Esquentadores e caldeiras</option>
+              <option value="termoacumulador">Termoacumuladores</option>
+              <option value="residencial">Instalações eléctricas residenciais</option>
+              <option value="comercial">Instalações eléctricas comerciais</option>
+              <option value="manutencao">Manutenção preventiva</option>
+              <option value="emergencia">Emergência 24h</option>
+              <option value="solar">Energia solar</option>
+              <option value="outro">Outro</option>
+            </select>
+            <textarea name="mensagem" placeholder="Descreva a sua necessidade" required></textarea>
+            <button type="submit" class="btn">Enviar mensagem</button>
+          </form>
+          <div id="successMessage" class="success-message">
+            Obrigado pela sua mensagem! Entraremos em contacto brevemente.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>A2B Reparações</h3>
+          <p>Serviços de electricidade, canalizações, multi-serviços em Lisboa com atendimento 24h e garantia. A sua segurança em primeiro lugar!</p>
+          <p><strong>Técnicos credenciados</strong> prontos para o servir com qualidade e segurança.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Links úteis</h3>
+          <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#testimonials">Avaliações</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contacto</h3>
+          <ul>
+            <li>
+              <a href="https://wa.me/351964562617" target="_blank" style="color:#25D366; font-weight:600;">
+                <i class="fab fa-whatsapp"></i> +351 964 562 617 <span style="color:#dc3545; font-weight:600;">(24h)</span>
+              </a>
+            </li>
+            <li><i class="fas fa-envelope"></i> a2b-reparacoes@hotmail.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> Lisboa, Portugal</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 A2B Reparações. Todos os direitos reservados. <strong>Atendimento 24 horas</strong></p>
+      </div>
+    </div>
+  </footer>
+  <a href="https://wa.me/351964562617" class="whatsapp-float" target="_blank" title="WhatsApp 24h">
+    <i class="fab fa-whatsapp"></i>
+    <span>WhatsApp</span>
+  </a>
+
+  <script>
+    // Script para o formulário de contacto
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Aqui você normalmente enviaria os dados para um servidor
+      // Como não temos o endpoint do Formspree, simularemos um envio bem-sucedido
+      
+      // Mostrar mensagem de sucesso
+      document.getElementById('successMessage').style.display = 'block';
+      
+      // Limpar formulário
+      this.reset();
+      
+      // Esconder mensagem após 5 segundos
+      setTimeout(function() {
+        document.getElementById('successMessage').style.display = 'none';
+      }, 5000);
+    });
+  </script>
+</body>
+</html>
